@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+    <h1>Product List</h1>
+
+    <ul>
+        {% for product in products %}
+            <li>
+                {{ product.name }} —
+                ₹{{ product.price }} —
+                Qty: {{ product.quantity }}
+            </li>
+        {% empty %}
+            <li>No products available</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
